@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Контрастный режим</title>
+    <link rel="stylesheet" href="cssstyles.css"> <!-- Убедитесь, что путь к файлу правильный -->
+</head>
+
+<body class="body body-contrast"> <!-- Класс для контрастного режима -->
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">Книги.com</span>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index-contrast.html">Домой</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li class="btn"><a href="registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="index.html">Обычный режим</a></li> <!-- Ссылка на обычную версию -->
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1 class="hero-title">Добро пожаловать в мир книг!</h1>
+            <p class="hero-description">На нашем сайте вы найдете разнообразные жанры и рекомендации.</p>
+            <button class="hero-button" onclick="location.href='#historySection'">Начать чтение</button>
+        </div>
+
+        <div class="historycal container">
+            <div id="historySection" class="history">
+                <h4>История литературы</h4>
+                <p>
+                    Литература - это искусство слова, способное передавать мысли, чувства и эмоции через образы и стили языка.
+                    С годами литература развивалась, формируя различные жанры и направления, вдохновляя миллионы читателей
+                    по всему миру. От древнерусских летописей до современных романов, книги помогают нам понять не только
+                    окружающий мир, но и самих себя.
+                </p>
+                <p>
+                    Каждая книга - это окно в другую реальность, будь то вымышленная история или историческое событие.
+                    Чтение расширяет наш кругозор и позволяет испытывать эмоции, которые сложно передать словами.
+                </p>
+            </div>
+        </div>
+
+        <div class="historycal container">
+            <h4>Наши рекомендации</h4>
+            <div class="recommendation-container">
+                <img src="img/классика.png" alt="Классическая литература" class="recommendation-image" />
+                <div class="dark-overlay">
+                    <div class="overlay-text">Классическая литература</div>
+                    <div class="overlay-description">
+                        <ul>
+                            <li>1. «Война и мир» - Лев Толстой</li>
+                            <li>2. «Преступление и наказание» - Фёдор Достоевский</li>
+                            <li>3. «Гордость и предубеждение» - Джейн Остин</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-container">
+                <img src="img/современная.png" alt="Современная литература" class="recommendation-image" />
+                <div class="dark-overlay">
+                    <div class="overlay-text">Современная литература</div>
+                    <div class="overlay-description">
+                        <ul>
+                            <li>1. «1984» - Джордж Оруэлл</li>
+                            <li>2. «Гарри Поттер» - Дж.К. Роулинг</li>
+                            <li>3. «Песня Льда и Огня» - Джордж Р. Р. Мартин</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-container">
+                <img src="img/науч поп.png" alt="Научно-популярные книги" class="recommendation-image" />
+                <div class="dark-overlay">
+                    <div class="overlay-text">Научно-популярные книги</div>
+                    <div class="overlay-description">
+                        <ul>
+                            <li>1. «Краткая история времени» - Стивен Хокинг</li>
+                            <li>2. «Сила привычки» - Чарльз Дахигг</li>
+                            <li>3. «Самая важная вещь» - Ховард Маркс</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="logo">Книги.com</span>
+                <p>Лучший сайт для изучения литературы</p>
+            </div>
+            <div>
+                <h5>Автор: Коломина Арина</h5>
+            </div>
+            <div>
+                <h5>Свяжитесь с нами по телефону +7(927)576-46-50</h5>
+                <p>Чтобы связаться с нами, вы можете отправить сообщение на WhatsApp или позвонить.</p>
+                <p>+7(927)576-46-50</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
