@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Упрощает работу с размерами */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff; /* Цвет текста по умолчанию для обычного режима */
+    background-color: #1a1a1a; /* Однородный темно-серый фон для страницы */
+    line-height: 1.6; /* Улучшаем читаемость текста */
+}
+
+/* Контрастный режим */
+body.body-contrast {
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Черный текст */
+}
+
+body.body-contrast a {
+    color: #0000ff; /* Синий цвет для ссылок */
+}
+
+body.body-contrast .hero,
+body.body-contrast footer,
+body.body-contrast .register-container {
+    background-color: #ffffff; /* Белый цвет фона для секций */
+    color: #000000; /* Черный текст */
+}
+
+/* Стили для текстов и элементов в контрастном режиме */
+body.body-contrast .dark-overlay {
+    background-color: rgba(255, 255, 255, 0.9); /* Полу-прозрачный белый фон для текстов */
+    color: #000; /* Черный текст на поверхностном слое */
+}
+
+body.body-contrast h1,
+body.body-contrast h2,
+body.body-contrast h3,
+body.body-contrast h4,
+body.body-contrast h5,
+body.body-contrast p,
+body.body-contrast .overlay-text,
+body.body-contrast .recommendation-title,
+body.body-contrast .overlay-description { /* Добавлено для описания на изображениях */
+    color: #000; /* Черный цвет для заголовков и параграфов в контрастном режиме */
+}
+
+body.body-contrast input,
+body.body-contrast button, 
+body.body-contrast label { /* Добавлено для меток */
+    background: #ffffff; /* Белый фон для кнопок и полей ввода */
+    color: #000; /* Черный текст для кнопок и полей ввода */
+    border: 2px solid #000; /* Черная обводка для полей ввода */
+}
+
+/* Нормальное состояние - цвет для текста на изображениях */
+.overlay-text {
+    color: #fff; /* Белый цвет текста заголовка в обычном режиме */
+}
+
+/* Нормальное состояние - цвет для описания на изображениях */
+.overlay-description {
+    color: #fff; /* Белый цвет текста описания в обычном режиме */
+}
+
+/* Нормальный режим - цвета для меток следующе */
+label {
+    color: #fff; /* Белый цвет текста для меток в обычном режиме */
+}
+
+/* Стили для рекомендаций */
+.recommendation-title {
+    color: #fff; /* Белый цвет текста для заголовков рекомендаций в обычном режиме */
+}
+
+/* Черный цвет для текста на заголовках в контрастном режиме */
+body.body-contrast .recommendation-title {
+    color: #000; /* Черный цвет текста для заголовков рекомендаций */
+}
+
+/* Черный цвет для описаний в контрастном режиме */
+body.body-contrast .overlay-description {
+    color: #000; /* Черный цвет текста для описания в контрастном режиме */
+}
+
+/* Остальная часть CSS остаётся без изменений далее */
+a {
+    text-decoration: none; /* Убираем подчеркивание для всех ссылок */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px; /* Скругление углов для всех изображений */
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+.team-image {
+    max-width: 700px; /* Устанавливаем максимальную ширину для изображения */
+    height: auto; /* Пропорциональная высота */
+    border-radius: 30px; /* Скругление углов */
+    margin: 20px auto; /* Центрируем изображение с отступом сверху и снизу */
+    display: block; /* Делаем изображение блочным элементом */
+}
+
+header {
+    padding: 20px 0; /* Увеличиваем отступы сверху и снизу для большей высоты */
+    background-color: #000; /* Черный фон для шапки */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для шапки */
+    width: 100%; /* Устанавливаем ширину на 100% */
+    position: fixed; /* Фиксируем шапку вверху страницы */
+    top: 0; /* Прикрепляем шапку к верхней части страницы */
+    left: 0; /* Убираем левый отступ */
+    right: 0;
+    z-index: 1000; /* Устанавливаем z-index, чтобы шапка была на переднем плане */
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 36px; /* Увеличение размера логотипа */
+    font-weight: 800;
+    color: #ffdd33; /* Желтый цвет для логотипа */
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    position: relative; /* Для псевдоэлементов */
+}
+
+header nav ul li a {
+    color: #ffdd33; /* Яркий цвет для ссылок */
+    padding: 15px 25px; /* Увеличенные отступы для кнопок */
+    font-weight: 700; /* Более жирный текст */
+    font-size: 22px; /* Увеличенный размер шрифта */
+    border: 2px solid #ffdd33; /* Желтая рамка вокруг ссылки */
+    border-radius: 10px; /* Скругленные углы */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Плавный переход */
+}
+
+header nav ul li a:hover {
+    color: #000; /* Черный текст при наведении */
+    background-color: #ffdd33; /* Желтый фон при наведении */
+    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
+}
+
+/* Стили для главного блока */
+.hero {
+    padding: 120px 0; /* Увеличенные отступы */
+    text-align: center; /* Центрирование текста */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон для улучшения читаемости */
+}
+
+.hero-title {
+    color: #ffdd33; /* Яркий желтый цвет заголовка */
+    font-size: 60px; /* Увеличенный размер заголовка */
+    font-weight: 800; /* Жирный заголовок */
+}
+
+.hero-description {
+    color: #fff; /* Белый цвет текста */
+    font-size: 22px; /* Размер текста */
+    margin: 20px 0; /* Отступы вокруг текста */
+}
+
+.hero-button {
+    color: #fff;
+    background-color: #debf1f; /* Яркий желтый фон кнопки */
+    padding: 15px 30px;
+    border-radius: 25px; /* Скругляем угол кнопки */
+    border: none; /* Без границы */
+    font-weight: 700; /* Более жирный текст */
+    font-size: 20px; /* Увеличенный размер шрифта */
+    transition: all 500ms ease;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* Стили для истории */
+
+.history {
+    padding: 50px 0; /* Отступы вокруг текста с историей */
+    text-align: center; /* Центрируем текст */
+}
+
+.history h4 {
+    font-size: 40px; /* Размер заголовка */
+    font-weight: 800; /* Жирный текст */
+    color: #ffdd33; /* Яркий цвет заголовка */
+    margin-bottom: 20px; /* Отступ между заголовком и текстом */
+}
+
+.history p {
+    font-size: 22px; /* Размер текста */
+    font-weight: 600; /* Жирный вес для текста */
+    color: #fff; /* Цвет текста */
+    line-height: 1.6; /* Увеличение межстрочного интервала для лучшей читаемости */
+    margin: 15px 0; /* Отступы для текста */
+}
+
+/* Стили для рекомендаций */
+.recommendation-container {
+    position: relative; /* Позволяет позиционировать текст поверх изображения */
+    display: inline-block; /* Позволяет изображению и тексту оставаться вместе */
+    margin: 15px; /* Отступы между элементами */
+    width: calc(33% - 30px); /* Устанавливаем ширину для трех элементов в ряд (учитывая отступы) */
+}
+
+.recommendation-image {
+    width: 100%; /* Занять всю ширину контейнера */
+    height: auto; /* Пропорциональная высота */
+    border-radius: 10px; /* Скругление углов */
+}
+
+.dark-overlay {
+    position: absolute; /* Позиционируем текст поверх изображения */
+    top: 0; /* Выровнять текст по верхнему краю */
+    left: 0; /* Выровнять текст по левому краю */
+    right: 0; /* Выровнять текст по правому краю */
+    bottom: 0; /* Выровнять текст по нижнему краю */
+    display: flex; /* Используем флекс для центрирования текста */
+    flex-direction: column; /* Располагаем текст вертикально */
+    justify-content: center; /* Центрируем текст по вертикали */
+    align-items: center; /* Центрируем текст по горизонтали */
+    background-color: rgba(0, 0, 0, 0.7); /* Полу-прозрачный фон для текста */
+    border-radius: 10px; /* Скругление углов для фона текста */
+    text-align: center; /* Центрируем текст */
+    padding: 10px; /* Внутренние отступы */
+}
+
+.overlay-text {
+    font-size: 24px; /* Размер заголовка */
+    font-weight: bold; /* Жирный шрифт для заголовка */
+    color: #fff; /* Белый цвет текста заголовка в обычном режиме */
+    margin-bottom: 10px; /* Отступ между заголовком и описанием */
+}
+
+/* Цвет текста для описания в обычном режиме */
+.overlay-description {
+    color: #fff; /* Белый цвет текста описания в обычном режиме */
+}
+
+/* Черный цвет для текста на заголовках в контрастном режиме */
+body.body-contrast .overlay-text,
+body.body-contrast .recommendation-title {
+    color: #000; /* Черный цвет текста для заголовков на изображениях в контрастном режиме */
+}
+
+/* Черный цвет для описаний в контрастном режиме */
+body.body-contrast .overlay-description {
+    color: #000; /* Черный цвет текста для описания в контрастном режиме */
+}
+
+/* Остальные стили для футера */
+footer {
+    background: #000; /* Черный фон для футера */
+    padding: 50px 0; /* Отступы */
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    color: #ffdd33; /* Желтый цвет для логотипа футера */
+}
+
+footer .blocks p {
+    width: 300px; /* Ширина текста */
+    margin: 15px 0; /* Отступы для параграфов */
+}
+
+footer .blocks h5 {
+    font-weight: 700; /* Жирный шрифт для заголовков футера */
+    font-size: 20px; /* Увеличенный размер шрифта для заголовков футера */
+    color: #ffdd33; /* Желтый цвет для заголовков футера */
+}
+
+footer .blocks ul {
+    list-style: none; /* Убираем маркеры */
+}
+
+footer .blocks ul li {
+    margin-top: 7px; /* Отступы */
+    opacity: 0.8; /* Прозрачность текста */
+}
+
+/* Стиль для страницы регистрации */
+.register-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.register-container h1 {
+    color: #ffdd33;
+    margin-bottom: 30px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000; /* Изменяем цвет текста для меток в контрастном режиме */
+    font-size: 18px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #000; /* Черная обводка для полей ввода в контрастном режиме */
+    border-radius: 5px;
+    background: rgba(255, 221, 51, 0.1);
+    color: #000; /* Черный текст в полях ввода */
+}
+
+.register-container button {
+    background-color: #ffdd33;
+    color: #000; /* Черный текст для кнопки */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-container button:hover {
+    background-color: #debf1f; /* Тот же цвет для кнопки при наведении */
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 30px; /* Уменьшение размера заголовка */
+    }
+
+    .hero-description {
+        font-size: 16px; /* Уменьшение размера описания */
+    }
+
+    .hero-button {
+        padding: 10px 20px; /* Уменьшение отступов кнопки */
+    }
+    
+    header nav ul {
+        flex-direction: column; /* Вертикальное размещение навигации */
+        align-items: center; /* Центрирование элементов навигации */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Отступы между элементами меню */
+    }
+
+    .recommendation-container {
+        width: 100%; /* Показывать одну рекомендацию на весь экран */
+        margin-bottom: 20px; /* Отступы между рекомендациями */
+    }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 40px; /* Увеличение размера заголовка для планшетов */
+    }
+
+    .hero-description {
+        font-size: 18px; /* Увеличение размера описания */
+    }
+
+    .recommendation-container {
+        width: calc(50% - 30px); /* Две рекомендации в ряд с отступами */
+    }
+}
+
+/* Ноутбуки и большие экраны */
+@media (min-width: 1025px) {
+    .hero-title {
+        font-size: 60px; /* Увеличение размера заголовка для больших экранов */
+    }
+
+    .hero-description {
+        font-size: 22px; /* Увеличение размера описания */
+    }
+
+    .recommendation-container {
+        width: calc(33% - 30px); /* Поддержка трех колонок на больших экранах */
+    }
+}
